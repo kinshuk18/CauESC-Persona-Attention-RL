@@ -1,0 +1,170 @@
+==================== ORIGINAL MODEL SUMMARY ====================
+
+TRAINING CHECKPOINTS:
+-rw-r--r-- 1 emotion intern 410M Nov  6 01:39 epoch-0.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 01:51 epoch-1.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 02:08 epoch-2.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 02:23 epoch-3.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 02:36 epoch-4.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 02:48 epoch-5.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 03:00 epoch-6.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 03:11 epoch-7.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 03:24 epoch-8.bin
+-rw-r--r-- 1 emotion intern 410M Nov  6 03:36 epoch-9.bin
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:01 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06040144
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:24 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06042413
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:27 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06042748
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:29 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06042940
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:35 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06043528
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:36 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06043635
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:38 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06043838
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:39 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06043943
+drwxr-xr-x 2 emotion intern 4.0K Nov  6 04:45 res_epoch-4.bin_my_case_study_3_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.03_ng.2_ts.2025-11-06044516
+
+TRAINING CONFIGURATION:
+{
+  "_name_or_path": "./Blenderbot_small-90M",
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BlenderbotSmallForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "context_attention_heads": 16,
+  "d_comet": 768,
+  "d_model": 512,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 2048,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 8,
+  "decoder_start_token_id": 1,
+  "do_blenderbot_90_layernorm": true,
+  "dropout": 0.1,
+  "emotion_size": 11,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 2048,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 8,
+  "encoder_pretrained_path": "Blenderbot_small-90M/Encoder",
+  "eos_token_id": 2,
+  "extra_pos_embeddings": 0,
+  "force_bos_token_to_be_generated": false,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "layernorm_variant": "xlm",
+  "length_penalty": 0.65,
+  "max_length": 128,
+  "max_position_embeddings": 512,
+  "min_length": 20,
+  "model_type": "blenderbot-small",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 10,
+  "num_hidden_layers": 8,
+  "pad_token_id": 0,
+  "scale_embedding": true,
+  "situation_attention_heads": 16,
+  "static_position_embeddings": false,
+  "strategy_size": 8,
+  "transformers_version": "4.30.0",
+  "unk_token_id": 3,
+  "use_cache": true,
+  "vocab_size": 54959
+}
+
+INFERENCE METRICS:
+{
+    "acc_cls_strategy_id": 0.375,
+    "acc_cls_strategy_id_top1": 0.375,
+    "acc_cls_strategy_id_top2": 0.5625,
+    "acc_cls_strategy_id_top3": 0.8125,
+    "acc_cls_strategy_id_top4": 0.875,
+    "acc_cls_strategy_id_top5": 0.875,
+    "bleu-1": 11.726020027348682,
+    "bleu-2": 5.593653660841081,
+    "bleu-3": 2.5140580247200375,
+    "bleu-4": 1.0142494686162409,
+    "dist-1": 34.91620111731844,
+    "dist-2": 54.67836257309941,
+    "dist-3": 61.963190184049076,
+    "f1": 18.88217574504985,
+    "f1_macro_cls_strategy_id": 0.1176470588235294,
+    "f1_micro_cls_strategy_id": 0.375,
+    "length": 23.375,
+    "meteor": 13.027232170394951,
+    "perplexity": 6.843981742858887,
+    "rouge-l": 14.445894611610765
+}
+
+CONFUSION MATRIX:
+[
+    [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+    ],
+    [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0
+    ],
+    [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+    ],
+    [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+]
+
+==============================================================
+

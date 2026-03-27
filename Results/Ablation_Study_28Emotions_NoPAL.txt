@@ -1,0 +1,181 @@
+==================== ABLATION_STUDY_PART_A_28Emotions_NoPAL SUMMARY ====================
+
+TRAINING CHECKPOINTS:
+-rw-r--r-- 1 emotion intern 410M Nov  7 23:28 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-0.bin
+-rw-r--r-- 1 emotion intern 410M Nov  7 23:37 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-1.bin
+-rw-r--r-- 1 emotion intern 410M Nov  7 23:48 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-2.bin
+-rw-r--r-- 1 emotion intern 410M Nov  7 23:57 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-3.bin
+-rw-r--r-- 1 emotion intern 410M Nov  8 00:07 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-4.bin
+-rw-r--r-- 1 emotion intern 410M Nov  8 00:17 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-5.bin
+-rw-r--r-- 1 emotion intern 410M Nov  8 00:27 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-6.bin
+-rw-r--r-- 1 emotion intern 410M Nov  8 00:36 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-7.bin
+-rw-r--r-- 1 emotion intern 410M Nov  8 00:47 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-8.bin
+-rw-r--r-- 1 emotion intern 410M Nov  8 00:56 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/epoch-9.bin
+drwxr-xr-x 2 emotion intern 4.0K Nov  8 02:24 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/res_epoch-9.bin_test_clean_final_valid_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.0_ng.0_ts.2025-11-08022429
+drwxr-xr-x 2 emotion intern 4.0K Nov  8 02:52 data/comet.comet/2025-11-07232055.2e-05.4.1gpu/res_epoch-9.bin_test_clean_final_valid_k.30_p.0.3_b.1_t.0.7_lp.1.0_rp.1.0_ng.0_ts.2025-11-08025151
+
+TRAINING CONFIGURATION:
+{
+  "_name_or_path": "./Blenderbot_small-90M",
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BlenderbotSmallForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "context_attention_heads": 16,
+  "d_comet": 768,
+  "d_model": 512,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 2048,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 8,
+  "decoder_start_token_id": 1,
+  "do_blenderbot_90_layernorm": true,
+  "dropout": 0.1,
+  "emotion_size": 11,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 2048,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 8,
+  "encoder_pretrained_path": "Blenderbot_small-90M/Encoder",
+  "eos_token_id": 2,
+  "extra_pos_embeddings": 0,
+  "force_bos_token_to_be_generated": false,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "layernorm_variant": "xlm",
+  "length_penalty": 0.65,
+  "max_length": 128,
+  "max_position_embeddings": 512,
+  "min_length": 20,
+  "model_type": "blenderbot-small",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 10,
+  "num_hidden_layers": 8,
+  "pad_token_id": 0,
+  "scale_embedding": true,
+  "situation_attention_heads": 16,
+  "static_position_embeddings": false,
+  "strategy_size": 8,
+  "transformers_version": "4.30.0",
+  "unk_token_id": 3,
+  "use_cache": true,
+  "vocab_size": 54959
+}
+
+INFERENCE METRICS:
+{
+  "Bleu_1": 0.15126093122471487,
+  "Bleu_2": 0.0652061183586881,
+  "Bleu_3": 0.03573006218093594,
+  "Bleu_4": 0.02250784471112938,
+  "CIDEr": 0.21654938660693684,
+  "METEOR": 0.0705304827986021,
+  "ROUGE_L": 0.16863282507580502
+}
+
+CONFUSION MATRIX:
+[
+  [
+    197,
+    19,
+    0,
+    19,
+    42,
+    59,
+    0,
+    27
+  ],
+  [
+    36,
+    24,
+    0,
+    4,
+    25,
+    11,
+    0,
+    6
+  ],
+  [
+    41,
+    11,
+    0,
+    15,
+    40,
+    28,
+    0,
+    14
+  ],
+  [
+    48,
+    1,
+    0,
+    23,
+    25,
+    41,
+    0,
+    22
+  ],
+  [
+    59,
+    23,
+    0,
+    12,
+    88,
+    74,
+    0,
+    51
+  ],
+  [
+    33,
+    2,
+    0,
+    21,
+    49,
+    104,
+    0,
+    49
+  ],
+  [
+    8,
+    2,
+    0,
+    8,
+    17,
+    62,
+    0,
+    28
+  ],
+  [
+    50,
+    5,
+    0,
+    8,
+    29,
+    24,
+    0,
+    144
+  ]
+]
+
+==============================================================

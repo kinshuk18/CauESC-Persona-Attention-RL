@@ -1,0 +1,68 @@
+==================== ABLATION_STUDY_PART_B_PAL_No28Emotions SUMMARY ====================
+
+TRAINING CHECKPOINTS:
+-rw-r--r-- 1 emotion intern 410M Nov 09 02:08 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-0.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 02:18 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-1.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 02:29 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-2.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 02:44 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-3.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 02:59 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-4.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 03:15 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-5.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 03:30 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-6.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 03:46 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-7.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 04:02 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-8.bin
+-rw-r--r-- 1 emotion intern 410M Nov 09 04:17 data/comet.comet/2025-11-09015930.2e-05.4.1gpu/epoch-9.bin
+
+TRAINING CONFIGURATION:
+{
+  "_name_or_path": "./Blenderbot_small-90M",
+  "d_comet": 768,
+  "d_model": 512,
+  "dropout": 0.1,
+  "emotion_size": 11,
+  "strategy_size": 8
+}
+
+INFERENCE METRICS:
+{
+  "acc_cls_strategy_id": 0.0,
+  "acc_cls_strategy_id_top1": 0.0,
+  "acc_cls_strategy_id_top2": 0.0,
+  "acc_cls_strategy_id_top3": 0.0,
+  "acc_cls_strategy_id_top4": 0.0,
+  "acc_cls_strategy_id_top5": 0.0,
+  "bleu-1": 13.660309240117495,
+  "bleu-2": 6.839605756623233,
+  "bleu-3": 4.319630996730607,
+  "bleu-4": 2.980036657317641,
+  "dist-1": 2.669953997414234,
+  "dist-2": 18.746630300339348,
+  "dist-3": 33.13424823004396,
+  "f1": 17.815735085303153,
+  "f1_macro_cls_strategy_id": 0.0,
+  "f1_micro_cls_strategy_id": 0.0,
+  "length": 20.24710648148148,
+  "meteor": 13.01748807502316,
+  "perplexity": 12.260926246643066,
+  "rouge-l": 15.134999890764755,
+  "Bleu_1": 0.16262984331134536,
+  "Bleu_2": 0.07076158537833836,
+  "Bleu_3": 0.038781342156567464,
+  "Bleu_4": 0.024455436863780263,
+  "CIDEr": 0.18665921149276027,
+  "EmbeddingAverageCosineSimilarity": 0.889995,
+  "GreedyMatchingScore": 0.711748,
+  "METEOR": 0.07058067574648004,
+  "ROUGE_L": 0.16824106586755394,
+  "VectorExtremaCosineSimilarity": 0.521884
+}
+
+CONFUSION MATRIX:
+[[   0 1106   12   36  443    4  127]
+ [   0    0    0    0    0    0    0]
+ [   0    0    0    0    0    0    0]
+ [   0    0    0    0    0    0    0]
+ [   0    0    0    0    0    0    0]
+ [   0    0    0    0    0    0    0]
+ [   0    0    0    0    0    0    0]]
+
+==============================================================
